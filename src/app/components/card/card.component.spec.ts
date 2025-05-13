@@ -1,4 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { CardComponent } from './card.component';
 
@@ -17,7 +21,51 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('start', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  });
+
+  describe('[imgSrc]', () => {
+    it('should show the imgSrc entered', () => {
+      const test = './assets/logo.png';
+
+      component.imgSrc = test;
+      fixture.detectChanges();
+
+      const img = fixture.debugElement.query(By.css('.card__img'));
+      const imgSrc = img.nativeElement.getAttribute('src');
+
+      expect(imgSrc).toEqual(test);
+    });
+  });
+
+  describe('[title]', () => {
+    it('should show the title entered', () => {
+      const test = 'title test';
+
+      component.title = test;
+      fixture.detectChanges();
+
+      const title = fixture.debugElement.query(By.css('.card__title'));
+      const titleTextContent = title.nativeElement?.textContent;
+
+      expect(titleTextContent).toContain(test);
+    });
+  });
+
+  describe('[description]', () => {
+    it('should show the description entered', () => {
+      const test = 'description test';
+
+      component.description = test;
+      fixture.detectChanges();
+
+      const description = fixture.debugElement.query(By.css('.card__description'));
+      const descriptionTextContent = description.nativeElement?.textContent;
+
+      expect(descriptionTextContent).toContain(test);
+    });
   });
 });

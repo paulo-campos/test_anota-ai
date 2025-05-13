@@ -70,7 +70,7 @@ describe('HeaderComponent', () => {
   });
 
   describe('[description]', () => {
-    it('should show the title entered', () => {
+    it('should show the description entered', () => {
       const test = 'description test';
 
       component.description = test;

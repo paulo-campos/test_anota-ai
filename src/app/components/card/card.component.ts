@@ -19,7 +19,7 @@ import { BadgeComponent } from '@components/badge/badge.component'
 export class CardComponent {
   TYPES = TYPES;
 
-  @Input() img = '';
+  @Input() imgSrc = '';
   @Input() title = '';
   @Input() description = '';
   @Input() type: IType = '1';
