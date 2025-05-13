@@ -14,7 +14,7 @@ import { SearchComponent } from '@components/search/search.component';
   ]
 })
 export class HomeComponent {
-  searched(value: string) {
+  onSearch(value: string) {
     console.log(value);
   }
 }

@@ -25,10 +25,10 @@ import {
 export class SearchComponent implements OnInit {
   search = new FormControl('');
 
-  @Output() searched = new EventEmitter<string>();
+  @Output() onSearch = new EventEmitter<string>();
 
   ngOnInit(): void {
     this.search.valueChanges
-      .subscribe(value => this.searched.emit(value as string));
+      .subscribe(value => this.onSearch.emit(value as string));
   }
 }
