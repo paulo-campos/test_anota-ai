@@ -28,30 +28,30 @@ describe('BadgeComponent', () => {
   });
 
   describe('[color]', () => {
-    it('should show the color entered in the background', () => {
-      const color = 'black';
+    it('should show the color entered', () => {
+      const test = 'black';
 
-      component.color = color;
+      component.color = test;
       fixture.detectChanges();
 
       const badge = fixture.debugElement.query(By.css('.badge'));
       const badgeBackgroundColor = badge.nativeElement.style.backgroundColor;
 
-      expect(badgeBackgroundColor).toEqual(color);
+      expect(badgeBackgroundColor).toEqual(test);
     });
   });
 
   describe('[label]', () => {
-    it('should show the text entered in the label', () => {
-      const label = 'label test';
+    it('should show the label entered', () => {
+      const test = 'label test';
 
-      component.label = label;
+      component.label = test;
       fixture.detectChanges();
 
       const badge = fixture.debugElement.query(By.css('.badge'));
       const badgeTextContent = badge.nativeElement?.textContent;
 
-      expect(badgeTextContent).toContain(label);
+      expect(badgeTextContent).toContain(test);
     });
   });
 });
