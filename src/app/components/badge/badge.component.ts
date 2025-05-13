@@ -14,6 +14,6 @@ import {
   ]
 })
 export class BadgeComponent {
-  @Input() label = '';
   @Input() color = '';
+  @Input() label = '';
 }
