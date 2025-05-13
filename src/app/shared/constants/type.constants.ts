@@ -1,4 +1,4 @@
-export const CATEGORIES = {
+export const TYPES = {
   '1': {
     color: '#0059FB',
     label: 'Paisagem'

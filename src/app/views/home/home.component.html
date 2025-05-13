@@ -6,6 +6,16 @@
     description="Paulo Campos"
   />
   <main class="home__content">
-    <app-search (onSearch)="onSearch($event)"/>
+    <app-search class="home__search" (onSearch)="onSearch($event)"/>
+    <section class="home__cards">
+      <app-card
+        class="home__card"
+        *ngFor="let item of filteredList"
+        [img]="item.img"
+        [title]="item.title"
+        [description]="item.description"
+        [type]="item.type"
+      />
+    </section>
   </main>
 </div>

@@ -3,7 +3,28 @@
   height: 100vh;
   display: block;
 
-  &__content {
-    padding: 30px;
+  &__search {
+    margin: 30px 0;
+    display: block;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+
+    &:before,
+    &:after {
+      content: '';
+    }
+  }
+
+  &__card {
+    width: 14.5%;
+    align-self: stretch;
+    transition-duration: 300ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
