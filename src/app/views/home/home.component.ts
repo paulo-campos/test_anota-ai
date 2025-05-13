@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { HeaderComponent } from '@components/header/header.component';
+import { SearchComponent } from '@components/search/search.component';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import { HeaderComponent } from '@components/header/header.component';
   styleUrl: './home.component.scss',
   standalone: true,
   imports: [
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent
   ]
 })
 export class HomeComponent {
-
+  searched(value: string) {
+    console.log(value);
+  }
 }

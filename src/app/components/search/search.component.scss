@@ -1,0 +1,56 @@
+$focus-color: #009AFE;
+
+@mixin hover {
+  border-color: $focus-color
+}
+
+@mixin focus {
+  border-width: 2px;
+  border-color: $focus-color;
+}
+
+.search {
+  width: 740px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+
+  &__input {
+    background-image: url('/assets/search.png');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 7px) 6px;
+    background-color: white;
+    width: 100%;
+    padding: 11px 16px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    outline: none;
+
+    &:hover {
+      @include hover;
+
+      ~ .search__divisor {
+        @include hover;
+      }
+    }
+
+    &:focus {
+      @include focus;
+      background-position: calc(100% - 5px) 6px;
+      margin: -1px;
+
+      ~ .search__divisor {
+        @include focus;
+      }
+    }
+  }
+
+  &__divisor {
+    height: 100%;
+    border-left: 1px solid #CCC;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+}
