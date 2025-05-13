@@ -17,6 +17,12 @@
     position: absolute;
   }
 
+  &__badge {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+  }
+
   &__content {
     height: 190px;
     padding: 6px 8px 12px 8px;

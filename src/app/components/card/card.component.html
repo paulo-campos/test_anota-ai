@@ -5,6 +5,11 @@
       [src]="img"
       [alt]="title"
     />
+    <app-badge
+      class="card__badge"
+      [label]="TYPES[type].label"
+      [color]="TYPES[type].color"
+    />
   </picture>
   <main class="card__content">
     <h3 class="card__title">{{ title }}</h3>
