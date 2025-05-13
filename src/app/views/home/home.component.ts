@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 import { IItem } from '@interfaces/item.interfaces';
-import { characterNormalizer } from '@utils/character-normalizer.utils';
+import { characterNormalizer } from '@utils/character-normalizer/character-normalizer.utils';
 import { ItemService } from '@services/item.service';
 import { HeaderComponent } from '@components/header/header.component';
 import { SearchComponent } from '@components/search/search.component';
