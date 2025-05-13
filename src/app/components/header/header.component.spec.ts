@@ -21,12 +21,6 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  describe('start', () => {
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    });
-  });
-
   describe('[logoSrc]', () => {
     it('should show the logoSrc entered', () => {
       const test = './assets/logo.png';

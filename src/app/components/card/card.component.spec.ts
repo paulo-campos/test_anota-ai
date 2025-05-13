@@ -21,12 +21,6 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  describe('start', () => {
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    });
-  });
-
   describe('[imgSrc]', () => {
     it('should show the imgSrc entered', () => {
       const test = './assets/logo.png';

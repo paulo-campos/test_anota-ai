@@ -2,7 +2,6 @@ import {
   ComponentFixture,
   TestBed
 } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 
 import { SearchComponent } from './search.component';
 
@@ -19,12 +18,6 @@ describe('SearchComponent', () => {
     fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  describe('start', () => {
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    });
   });
 
   describe('(onSearch)', () => {

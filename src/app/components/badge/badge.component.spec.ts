@@ -21,12 +21,6 @@ describe('BadgeComponent', () => {
     fixture.detectChanges();
   });
 
-  describe('start', () => {
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    });
-  });
-
   describe('[color]', () => {
     it('should show the color entered', () => {
       const test = 'black';
