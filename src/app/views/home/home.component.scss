@@ -20,11 +20,25 @@
 
   &__card {
     width: 14.5%;
+    position: relative;
     align-self: stretch;
     transition-duration: 300ms;
 
     &:hover {
       transform: scale(1.05);
+    }
+  }
+
+  &__card-close {
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    z-index: 1;
+    transition-duration: 300ms;
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

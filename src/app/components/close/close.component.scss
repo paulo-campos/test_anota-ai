@@ -1,0 +1,42 @@
+.close {
+  background: white;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  position: relative;
+  transition-duration: 300ms;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: #666;
+    width: 1px;
+    height: 11px;
+    position: absolute;
+    top: 6px;
+    transition-duration: 300ms;
+  }
+
+  &:before {
+    left: 11px;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    right: 11px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    border-color: #666;
+    transform: rotate(-90deg);
+
+    &:before,
+    &:after {
+      content: '';
+      background-color: red;
+    }
+  }
+}

@@ -8,14 +8,20 @@
   <main class="home__content">
     <app-search class="home__search" (onSearch)="onSearch($event)"/>
     <section class="home__cards">
-      <app-card
+      <div
         class="home__card"
         *ngFor="let item of filteredList"
-        [img]="item.img"
-        [title]="item.title"
-        [description]="item.description"
-        [type]="item.type"
-      />
+      >
+        <div class="home__card-close shadow">
+          <app-close (click)="removeItem(item.id)" />
+        </div>
+        <app-card
+          [img]="item.img"
+          [title]="item.title"
+          [description]="item.description"
+          [type]="item.type"
+        />
+      </div>
     </section>
   </main>
 </div>
