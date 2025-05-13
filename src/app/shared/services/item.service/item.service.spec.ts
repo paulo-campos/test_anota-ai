@@ -6,8 +6,8 @@ import {
 
 import { API } from '@constants/api.constants';
 import { IItem } from '@interfaces/item.interfaces';
+import { mockList } from '@mocks/list.mock';
 import { ItemService } from './item.service';
-import { mockData } from './item.service.mock';
 
 describe('ItemService', () => {
   let httpTestingController: HttpTestingController;
@@ -38,13 +38,13 @@ describe('ItemService', () => {
 
     it('should return expected data of items', (done: DoneFn) => {
       service.getList().subscribe((response: IItem[]) => {
-        expect(response).toEqual(mockData);
+        expect(response).toEqual(mockList);
         done();
       });
 
       const testRequest = httpTestingController.expectOne(API.LIST);
 
-      testRequest.flush(mockData);
+      testRequest.flush(mockList);
     });
   });
 });

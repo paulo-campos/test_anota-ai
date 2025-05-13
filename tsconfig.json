@@ -23,7 +23,8 @@
       "@interfaces/*": ["app/shared/interfaces/*"],
       "@utils/*": ["app/shared/utils/*"],
       "@services/*": ["app/shared/services/*"],
-      "@components/*": ["app/components/*"]
+      "@mocks/*": ["app/shared/mocks/*"],
+      "@components/*": ["app/components/*"],
     },
   },
   "angularCompilerOptions": {

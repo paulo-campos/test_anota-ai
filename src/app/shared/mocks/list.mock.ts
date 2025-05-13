@@ -1,6 +1,6 @@
 import { IItem } from '@interfaces/item.interfaces';
 
-export const mockData: IItem[] = [
+export const mockList: IItem[] = [
   {
     "id": 1,
     "title": "Árvore",

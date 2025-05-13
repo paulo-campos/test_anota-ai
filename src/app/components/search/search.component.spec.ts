@@ -1,4 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { SearchComponent } from './search.component';
 
@@ -17,7 +21,31 @@ describe('SearchComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('start', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  });
+
+  describe('(onSearch)', () => {
+    it('should have been called 1 time after inputed text', () => {
+      spyOn(component.onSearch, 'emit');
+
+      const value = 'value test';
+
+      component.search.setValue(value);
+
+      expect(component.onSearch.emit).toHaveBeenCalledTimes(1);
+    });
+
+    it('should output inputed text', () => {
+      spyOn(component.onSearch, 'emit');
+
+      const value = 'value test';
+
+      component.search.setValue(value);
+
+      expect(component.onSearch.emit).toHaveBeenCalledWith(value);
+    });
   });
 });
