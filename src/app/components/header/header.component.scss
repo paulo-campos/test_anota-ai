@@ -3,7 +3,7 @@ $description-color: #918E8D;
 .header {
   background-color: white;
   height: 60px;
-  padding: 0.30em;
+  padding: 4px;
   display: flex;
 
   &__logo {
@@ -12,19 +12,19 @@ $description-color: #918E8D;
   }
 
   &__texts {
-    padding: 0.3em 0.4em;
+    padding: 4px 6px;
   }
 
   &__title {
-    font-size: 1.10em;
+    font-size: 17px;
   }
 
   &__description {
-    font-size: 0.90em;
+    font-size: 14px;
     color: $description-color;
     padding-left: 12px;
     padding-right: 4px;
-    margin: 3px;
+    margin: 4px;
     float: left;
     position: relative;
 
