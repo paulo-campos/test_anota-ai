@@ -6,14 +6,17 @@
     description="Paulo Campos"
   />
   <main class="home__content">
-    <app-search class="home__search" (onSearch)="onSearch($event)"/>
+    <app-search
+      class="home__search"
+      (onSearch)="onSearch($event)"
+    />
     <section class="home__cards">
       <div
         class="home__card"
-        *ngFor="let item of filteredList"
+        *ngFor="let item of filtered$ | async"
       >
         <div class="home__card-close shadow">
-          <app-close (click)="removeItem(item.id)" />
+          <app-close (click)="onRemove(item.id)" />
         </div>
         <app-card
           [img]="item.img"
