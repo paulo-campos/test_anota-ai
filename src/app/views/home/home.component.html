@@ -13,10 +13,10 @@
     <section class="home__cards">
       <div
         class="home__card"
-        *ngFor="let item of filtered$ | async"
+        *ngFor="let item of filteredList; let i = index"
       >
         <div class="home__card-close shadow">
-          <app-close (click)="onRemove(item.id)" />
+          <app-close (click)="onRemove(i)" />
         </div>
         <app-card
           [img]="item.img"

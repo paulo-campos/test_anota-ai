@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 import { IItem } from '@interfaces/item.interfaces';
 import { characterNormalizer } from '@utils/character-normalizer.utils';
@@ -12,16 +12,11 @@ import { SearchComponent } from '@components/search/search.component';
 import { CloseComponent } from '@components/close/close.component';
 import { CardComponent } from '@components/card/card.component';
 
-import { HomeFacade } from './home.facade';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
-  providers: [
-    HomeFacade
-  ],
   imports: [
     CommonModule,
     HeaderComponent,
@@ -30,34 +25,35 @@ import { HomeFacade } from './home.facade';
     CardComponent
   ]
 })
-export class HomeComponent {
-  filtered$: Observable<IItem[]>;
+export class HomeComponent implements OnInit {
+  loadedList: IItem[] = [];
+  filteredList: IItem[] = [];
 
-  constructor(private itemService: ItemService) {
-    this.filtered$ = this.itemService.getList();
+  constructor(private itemService: ItemService) {}
+
+  ngOnInit(): void {
+    this.itemService.getList()
+      .subscribe(response => {
+        this.loadedList = response;
+        this.filteredList = response;
+      });
   }
 
   onSearch(value: string) {
-    this.filtered$ = this.itemService.getList()
-      .pipe(map(response => (
-        response.filter(({ title, description }) => {
-          const titleNormalized = characterNormalizer(title);
-          const descriptionNormalized = characterNormalizer(description);
-          const valueNormalized = characterNormalizer(value);
+    this.filteredList = this.loadedList.filter(({ title, description }) => {
+      const titleNormalized = characterNormalizer(title);
+      const descriptionNormalized = characterNormalizer(description);
+      const valueNormalized = characterNormalizer(value);
 
-          return (
-            !value.length ||
-            titleNormalized.includes(valueNormalized) ||
-            descriptionNormalized.includes(valueNormalized)
-          );
-        })
-      )));
+      return (
+        !value.length ||
+        titleNormalized.includes(valueNormalized) ||
+        descriptionNormalized.includes(valueNormalized)
+      );
+    });
   }
 
-  onRemove(itemId: number) {
-    this.filtered$ = this.filtered$
-      .pipe(map(response => (
-        response.filter(({ id }) => id !== itemId)
-      )));
+  onRemove(i: number) {
+    this.filteredList.splice(i, 1);
   }
 }
