@@ -14,5 +14,6 @@ Teste feito com base nas informações do arquivo:
 - Usei o teste com **Karma/Jasmine** porque estou mais familiarizado, mas já trabalhei com **Jest** em um Design System e não tenho problema
 
 ## 🔗 Links
-- 📦 [Repositório](https://github.com/paulo-campos/test_anota-ai)
-- 👀 [Ambiente](https://paulo-campos-teste-anota-ai.netlify.app/)
+- 🗃️ [Repositório](https://github.com/paulo-campos/test_anota-ai)
+- 👀 [Ambiente](https://paulo-campos-teste-anota-ai.netlify.app)
+- 📦 [ZIP](https://github.com/paulo-campos/test_anota-ai/blob/main/test_anota-ai.zip)
