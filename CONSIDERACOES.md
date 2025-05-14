@@ -16,4 +16,4 @@ Teste feito com base nas informações do arquivo:
 ## 🔗 Links
 - 🗃️ [Repositório](https://github.com/paulo-campos/test_anota-ai)
 - 👀 [Ambiente](https://paulo-campos-teste-anota-ai.netlify.app)
-- 📦 [ZIP](https://github.com/paulo-campos/test_anota-ai/blob/main/test_anota-ai.zip)
+- 📦 [ZIP](https://mega.nz/file/hMo2xIJS#eNz48xWTFb4tBTRjrgKgAqB_pRDrttQEqh6_dcsJ3ic)
