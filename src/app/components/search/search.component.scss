@@ -1,12 +1,12 @@
-$focus-color: #009AFE;
+$action-color: #009AFE;
 
 @mixin hover {
-  border-color: $focus-color
+  border-color: $action-color
 }
 
 @mixin focus {
   border-width: 2px;
-  border-color: $focus-color;
+  border-color: $action-color;
 }
 
 .search {
