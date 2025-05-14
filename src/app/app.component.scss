@@ -1,0 +1,10 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    z-index: 1;
+  }
+}

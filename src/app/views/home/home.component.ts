@@ -7,7 +7,6 @@ import {
 import { IItem } from '@interfaces/item.interfaces';
 import { characterNormalizer } from '@utils/character-normalizer/character-normalizer.utils';
 import { ItemService } from '@services/item.service/item.service';
-import { HeaderComponent } from '@components/header/header.component';
 import { SearchComponent } from '@components/search/search.component';
 import { CloseComponent } from '@components/close/close.component';
 import { CardComponent } from '@components/card/card.component';
@@ -19,7 +18,6 @@ import { CardComponent } from '@components/card/card.component';
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
     SearchComponent,
     CloseComponent,
     CardComponent
