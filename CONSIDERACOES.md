@@ -12,6 +12,7 @@ Teste feito com base nas informações do arquivo:
 - A opção de deletar não estava totalmente clara no case, então fiz funcionar somente no que está em tela e não no que foi baixado, logo filtrar após deletar algum item irá renderizar a partir de todos novamente
 - Usei o **BEM** como metodologia nos estilos porque estou mais familiarizado, mas já trabalhei antes com **OOCSS** e **Smacss** e confesso que não me recordo muito delas pois no geral sempre precisei usar frameworks
 - Usei o teste com **Karma/Jasmine** porque estou mais familiarizado, mas já trabalhei com **Jest** em um Design System com React e não tenho problema nisso
+- Não fiz responsivo por falta de tempo mesmo, mas se posso eu gosto de implementar com Mobile First
 
 ## 🔗 Links
 - 🗃️ [Repositório](https://github.com/paulo-campos/test_anota-ai)
